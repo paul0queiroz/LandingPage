@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Afacad } from 'next/font/google';
 import "./globals.css";
-import { Header } from "./components/header";
+import { Header } from "./_components/header";
 
 const lato = Afacad({
   subsets: ['latin'],
@@ -21,9 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={lato.className}>
-          <Header />
-          {children}
+        className={lato.className}
+      >
+        <Header />
+        {children}
       </body>
     </html>
   );
